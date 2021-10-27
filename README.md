@@ -22,9 +22,10 @@ The solution is made in C# with Visual Studio 2019 .NET Core 3.1. The solution c
   NUnit test project detail all the test made to validate most of the scenarios to inspect and handle the possible errors.
   
   ## 3. AcmeCorp.UI: 
-  Console application that reads the (input.txt) file in the output folder and proccess the common time the employees have coincided 
+  Console application that reads the (input.txt) file in the output folder and proccess the common time the employees have coincided. The (input.txt) file is set to be copied to the output folder. 
   
-  - Program.cs => Main method.
+  - Program.cs: Main method.
+  - input.txt: File with the data to be processed
     
  ## Build 
  
