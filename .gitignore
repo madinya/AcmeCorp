@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/src/AcmeCorp/bin/Debug/netcoreapp3.1
+/src/AcmeCorp/obj
+/src/.vs/AcmeCorp/v16
+/src/AcmeCorp.Domain/obj
+/src/AcmeCorp.Domain/bin/Debug
+/src/AcmeCorp.Test/obj
+/src/AcmeCorp.Test/bin
