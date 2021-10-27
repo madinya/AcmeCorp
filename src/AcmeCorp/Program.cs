@@ -9,11 +9,11 @@ namespace AcmeCorp
         {
             try
             {
-                Console.WriteLine("Reading the file input.txt");
+                Console.WriteLine("Reading the file input.txt \n\n");
                 // Read File from output directory
                 var stringArray = DataReaderIo.ReadFileScheduleTime("input.txt");
 
-                Console.WriteLine("Read finished. Processing the data");
+                Console.WriteLine("Read finished. Processing the data \n\n");
                 // Define attendance list
                 var attendanceList = new List<Attendance>();
 
@@ -36,7 +36,7 @@ namespace AcmeCorp
                 {
                     Console.WriteLine($"{item.Key}: {item.Value}");
                 }
-                Console.WriteLine("--------- That's it. ---------");
+                Console.WriteLine("--------- That's it. ---------\n\n");
 
             }
             catch (Exception ex) 

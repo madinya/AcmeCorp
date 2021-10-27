@@ -10,3 +10,6 @@
 /src/AcmeCorp.Domain/bin/Debug
 /src/AcmeCorp.Test/obj
 /src/AcmeCorp.Test/bin
+/src/.vs/AcmeCorp/DesignTimeBuild/.dtbcache.v2
+/src/AcmeCorp/bin/x64/Debug/netcoreapp3.1
+/src/AcmeCorp.Domain/bin/x64/Debug

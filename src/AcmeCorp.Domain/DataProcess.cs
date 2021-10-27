@@ -61,8 +61,8 @@ namespace AcmeCorp.Domain
 
         private static bool CompareSchedules(Schedule first, Schedule second)
         {
-            // return first.DayOfWeek == second.DayOfWeek && (first.StartTime == second.StartTime && first.EndTime == second.EndTime); // Fixed Time
-             return first.DayOfWeek == second.DayOfWeek && (first.StartTime < second.EndTime && second.StartTime < first.EndTime); // Overlapped Time
+             return first.DayOfWeek == second.DayOfWeek && (first.StartTime == second.StartTime && first.EndTime == second.EndTime); // Fixed Time
+             //return first.DayOfWeek == second.DayOfWeek && (first.StartTime < second.EndTime && second.StartTime < first.EndTime); // Overlapped Time
         }
     }
 }
