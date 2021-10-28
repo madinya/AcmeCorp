@@ -14,9 +14,9 @@ The solution is made in C# with Visual Studio 2019 .NET Core 3.1. The solution c
   - Schedule.cs : Class with the detail the Employee's working day start and end working time,.
   - Attendance.cs: Class to store and process the schedule's details for each employee.
   
-  - DataReaderIo.cs => Class to read the specified file (input.txt).
-  - DataParser.cs => Class to process the format specified and mapping into the Attendance class.
-  - DataProcess.cs => Class to get the common time the employees were on the same frame time.
+  - DataReaderIo.cs:  Class to read the specified file (input.txt).
+  - DataParser.cs: Class to process the format specified and mapping into the Attendance class.
+  - DataProcess.cs: Class to get the common time the employees were on the same frame time.
 
   ## 2. AcmeCorp.Test: 
   NUnit test project detail all the test made to validate most of the scenarios to inspect and handle the possible errors.
