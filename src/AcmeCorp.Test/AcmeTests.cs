@@ -8,9 +8,16 @@ namespace AcmeCorp.Test
 {
     public class AcmeTests
     {
+        private string _content;
+
         [SetUp]
         public void Setup()
         {
+            _content = "RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00- 21:00\n" +
+                       "ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00\n" +
+                       "ANDRES=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00\n" +
+                       "AMIRA=WE10:00-12:00,TH12:00-14:00,SU20:00-21:00\n" +
+                       "GRACIELA=WE09:00-12:00,TH11:00-14:00,SA13:00-17:00";
         }
 
         [Test]
@@ -62,7 +69,8 @@ namespace AcmeCorp.Test
         [Test]
         public void InputFileExists()
         {
-            var sentences = DataReaderIo.ReadFileScheduleTime(@"E:\input.txt");
+            //var sentences = DataReaderIo.ReadFileScheduleTime(@"E:\input.txt");
+            var sentences = _content.Split('\n');
 
             var attendances = new List<Attendance>();
             foreach (var sentence in sentences)
@@ -88,7 +96,7 @@ namespace AcmeCorp.Test
         [Test]
         public void InputFileDoesNotExists()
         {
-            Assert.Throws<FileNotFoundException>(() => DataReaderIo.ReadFileScheduleTime(@"E\wsus.txt"));
+            Assert.Throws<FileNotFoundException>(() => DataReaderIo.ReadFileScheduleTime(@"E:\not_existing_path_file.txt"));
         }
     }
 }

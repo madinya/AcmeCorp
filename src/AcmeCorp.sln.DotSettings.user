@@ -6,16 +6,7 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=711737e9_002D71e9_002D4a7e_002Dba52_002D6caa1712e6b2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatDividerNameSchedule&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatTime&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatInvalidTime&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputStartDateGreaterThanEndDate&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatIncompleteHours&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatInvalidDay&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatInvalidMissingHour&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputBadFormatInvalidFormatHour&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputFileExists&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.TestInputReceived&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.Tests.InputFileDoesNotExists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.AcmeTests.InputFileExists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::FA202A98-0AEA-4EC5-9439-60850E1CCAC3::.NETCoreApp,Version=v3.1::AcmeCorp.Test.AcmeTests.InputFileDoesNotExists&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
