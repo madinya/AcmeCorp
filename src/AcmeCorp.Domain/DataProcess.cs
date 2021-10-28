@@ -13,10 +13,16 @@ namespace AcmeCorp.Domain
     {
         public static List<KeyValuePair<string, int>> ProcessCommonSchedule(List<Attendance> attendances)
         {
+            if (attendances.Count == 0)
+                throw new ArgumentException("List is empty", "attendances");
+
+            if (attendances.Count == 1)
+                throw new ArgumentException("List contains only one element", "attendances");
+
             var ConcurrentEmployees = new List<KeyValuePair<string, int>>();
             var ProcessedPair = new List<string>();
 
-            for (var i = 0; i < attendances.Count() -1; i++)
+            for (var i = 0; i < attendances.Count() - 1; i++)
             {
                 var attendanceFirst = attendances[i];
 
@@ -24,19 +30,19 @@ namespace AcmeCorp.Domain
                 {
                     if (i == j)
                         continue;
-                    
+
                     var commonSchedule = 0;
                     var attendanceSecond = attendances[j];
 
                     var pairName = $"{attendanceFirst.Name} - {attendanceSecond.Name}";
                     ProcessedPair.Add(pairName);
 
-                    if (VerifyIfAlreadyProcessed(ProcessedPair,  attendanceFirst, attendanceSecond))
+                    if (VerifyIfAlreadyProcessed(ProcessedPair, attendanceFirst, attendanceSecond))
                         continue;  // Makes no sense to check RENE-ANDRES | ANDRES-RENE
 
                     var scheduleFirst = attendanceFirst.ScheduleDetail;
                     var scheduleSecond = attendanceSecond.ScheduleDetail;
-                    
+
                     foreach (var scheduleFirstDet in scheduleFirst)
                     {
                         foreach (var scheduleSecondDet in scheduleSecond)
@@ -54,15 +60,15 @@ namespace AcmeCorp.Domain
             return ConcurrentEmployees;
         }
 
-        private static bool VerifyIfAlreadyProcessed(List<string> ProcessedPair,  Attendance attendanceFirst, Attendance attendanceSecond)
+        private static bool VerifyIfAlreadyProcessed(List<string> ProcessedPair, Attendance attendanceFirst, Attendance attendanceSecond)
         {
             return ProcessedPair.Exists(key => key == $"{attendanceSecond.Name} - {attendanceFirst.Name}");
         }
 
         private static bool CompareSchedules(Schedule first, Schedule second)
         {
-             return first.DayOfWeek == second.DayOfWeek && (first.StartTime == second.StartTime && first.EndTime == second.EndTime); // Fixed Time
-             //return first.DayOfWeek == second.DayOfWeek && (first.StartTime < second.EndTime && second.StartTime < first.EndTime); // Overlapped Time
+            return first.DayOfWeek == second.DayOfWeek && (first.StartTime == second.StartTime && first.EndTime == second.EndTime); // Fixed Time
+                                                                                                                                    //return first.DayOfWeek == second.DayOfWeek && (first.StartTime < second.EndTime && second.StartTime < first.EndTime); // Overlapped Time
         }
     }
 }

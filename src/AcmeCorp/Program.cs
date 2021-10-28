@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using AcmeCorp.Domain;
+
 namespace AcmeCorp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             try
             {
@@ -17,7 +19,7 @@ namespace AcmeCorp
                 // Define attendance list
                 var attendanceList = new List<Attendance>();
 
-                // Process the result with the DataParser 
+                // Process the result with the DataParser
                 foreach (var item in stringArray)
                 {
                     var attendanceDetail = item.ParseSentenceEmployee();
@@ -25,6 +27,7 @@ namespace AcmeCorp
                     if (attendanceDetail != null)
                         attendanceList.Add(attendanceDetail);
                 }
+
                 // Once we get all the list parsed process the data to get the result
                 var result = DataProcess.ProcessCommonSchedule(attendanceList);
 
@@ -36,13 +39,18 @@ namespace AcmeCorp
                 {
                     Console.WriteLine($"{item.Key}: {item.Value}");
                 }
-                Console.WriteLine("--------- That's it. ---------\n\n");
 
+                Console.WriteLine("\n--------- That's it. ---------\n");
+                Console.WriteLine("\n---------  SUCCESS   ---------\n");
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Console.WriteLine($"EXCEPTION! Something wrong has happened. Error message: " + ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Press any key to continue");
+                Console.ReadLine();
             }
         }
     }
