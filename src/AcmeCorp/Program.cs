@@ -13,7 +13,8 @@ namespace AcmeCorp
             {
                 Console.WriteLine("Reading the file input.txt \n\n");
                 // Read File from output directory
-                var stringArray = DataReaderIo.ReadFileScheduleTime("input.txt");
+                IDataReader datareader = new DataReaderIo("input.txt");
+                var stringArray = datareader.Read();
 
                 Console.WriteLine("Read finished. Processing the data \n\n");
                 // Define attendance list

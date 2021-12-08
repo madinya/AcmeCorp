@@ -96,7 +96,8 @@ namespace AcmeCorp.Test
         [Test]
         public void InputFileDoesNotExists()
         {
-            Assert.Throws<FileNotFoundException>(() => DataReaderIo.ReadFileScheduleTime(@"E:\not_existing_path_file.txt"));
+            IDataReader dataReader = new DataReaderIo(@"E:\not_existing_path_file.txt");
+            Assert.Throws<FileNotFoundException>(() => dataReader.Read());
         }
     }
 }

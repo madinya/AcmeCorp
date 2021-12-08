@@ -5,9 +5,16 @@ namespace AcmeCorp.Domain
     /// <summary>
     /// Class on charge to read from a received path the file to process
     /// </summary>
-    public static class DataReaderIo
+    public class DataReaderIo : IDataReader
     {
-        public static string[] ReadFileScheduleTime(string _path)
+        private readonly string _path;
+
+        public DataReaderIo(string path)
+        {
+            _path = path;
+        }
+
+        public string[] Read()
         {
             if (!File.Exists(_path))
                 throw new FileNotFoundException($"File not found in path {_path}, please check the file exists or you have access to it!");

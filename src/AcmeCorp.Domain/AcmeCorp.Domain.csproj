@@ -63,7 +63,9 @@
     <Compile Include="DataProcess.cs" />
     <Compile Include="DataReaderIo.cs" />
     <Compile Include="DataParser.cs" />
+    <Compile Include="DataReaderJson.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="IDataReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
   </ItemGroup>
