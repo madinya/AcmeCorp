@@ -3,6 +3,11 @@ Acme solution ~ by MaD
 
 This project it's about processing an input file with a specific formatted data and getting the result of the common time the employees have been with.
 
+The DataReaderIo reads the input file, the result is a string array that is processed by the DataParser class who decodes or notify any error in the format for each line, if there is no error it maps into objects of the business logic class (Attendance, Employee and Schedule) with these classes the DataProcess makes the magic processing the data and generates a key paired value with the results of the employees that has been at the same time that can be consummed by any UI to get the output. 
+
+By default is only taking the times that matches (start time and end time) but there is an option commented to stablish if the times are overlapped. 
+
+
 ## Development 
 The solution is made in C# with Visual Studio 2019 .NET Core 3.1. The solution contains three main projects.
 
